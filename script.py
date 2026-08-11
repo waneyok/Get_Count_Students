@@ -16,12 +16,12 @@ def test_get_count_students():
         need_link.click()
         
         # tables = browser.find_elements(By.CSS_SELECTOR, "table.MsoTableGrid")
-        tables = browser.find_elements(By.XPATH, "//table[contains(@class, 'MsoTableGrid')]")
+        tables = browser.find_elements(By.XPATH, "//table[contains(@class, 'MsoTableGrid')][2]")
         
         # tb_element = tables[1].find_element(
         #     By.CSS_SELECTOR, "tr:nth-child(3) td:nth-child(3)"
         # )
-        tb_element = tables[1].find_element(
+        tb_element = tables.find_element(
             By.XPATH, "./tr[3]/td[3]"
         )
         
